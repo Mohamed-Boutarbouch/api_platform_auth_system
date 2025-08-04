@@ -25,7 +25,7 @@ class EmailVerifier
             'api_verify_email',
             $user->getId(),
             $user->getEmail(),
-            ['id' => $user->getId()] // Add user ID for anonymous verification
+            ['id' => $user->getId()]
         );
 
         $context = $email->getContext();
