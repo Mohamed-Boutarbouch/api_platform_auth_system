@@ -34,7 +34,8 @@
         "symfony/twig-bundle": "7.3.*",
         "symfony/validator": "7.3.*",
         "symfony/yaml": "7.3.*",
-        "symfonycasts/verify-email-bundle": "^1.17"
+        "symfonycasts/verify-email-bundle": "^1.17",
+        "tilleuls/forgot-password-bundle": "^2.0"
     },
     "config": {
         "allow-plugins": {

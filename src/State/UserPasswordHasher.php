@@ -6,7 +6,7 @@ use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
 use App\Entity\User;
 use App\Security\EmailVerifier;
-use App\Service\VerificationEmailFactory;
+use App\Service\MailerService;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
@@ -20,7 +20,7 @@ final readonly class UserPasswordHasher implements ProcessorInterface
         private ProcessorInterface $processor,
         private UserPasswordHasherInterface $passwordHasher,
         private EmailVerifier $emailVerifier,
-        private VerificationEmailFactory $verificationEmailFactory
+        private MailerService $mailerService
     ) {
     }
 
@@ -45,7 +45,7 @@ final readonly class UserPasswordHasher implements ProcessorInterface
         $result = $this->processor->process($data, $operation, $uriVariables, $context);
 
         if ($isNewUser && $result instanceof User) {
-            $email = $this->verificationEmailFactory->createVerificationEmail($result);
+            $email = $this->mailerService->createVerificationEmail($result);
             $this->emailVerifier->sendEmailConfirmation($result, $email);
         }
 

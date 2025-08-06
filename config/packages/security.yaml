@@ -34,6 +34,7 @@ security:
           }
         - { path: ^/api/verify-email, roles: PUBLIC_ACCESS }
         - { path: ^/api/resend-verification, roles: PUBLIC_ACCESS }
+        - { path: "^/api/forgot_password", role: PUBLIC_ACCESS }
         # - { path: ^/api/users, roles: PUBLIC_ACCESS, methods: [POST] }
         # - { path: ^/api/login_check, roles: PUBLIC_ACCESS, methods: [POST] }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }

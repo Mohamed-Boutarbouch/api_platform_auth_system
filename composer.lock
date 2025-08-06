@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ecb016a606c995203242397b47d715a",
+    "content-hash": "e06379dc68ee412ab56ca2b0763e2281",
     "packages": [
         {
             "name": "api-platform/doctrine-common",
@@ -7856,6 +7856,98 @@
                 "source": "https://github.com/SymfonyCasts/verify-email-bundle/tree/v1.17.3"
             },
             "time": "2024-12-09T18:44:25+00:00"
+        },
+        {
+            "name": "tilleuls/forgot-password-bundle",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle.git",
+                "reference": "027a4508e0289c99d42a51937f2b8dfeb0fa1eb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coopTilleuls/CoopTilleulsForgotPasswordBundle/zipball/027a4508e0289c99d42a51937f2b8dfeb0fa1eb7",
+                "reference": "027a4508e0289c99d42a51937f2b8dfeb0fa1eb7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/config": "^5.1 || ^6.0 || ^7.0",
+                "symfony/dependency-injection": "^5.1 || ^6.0 || ^7.0",
+                "symfony/event-dispatcher": "^5.1 || ^6.0 || ^7.0",
+                "symfony/http-foundation": "^5.1 || ^6.0 || ^7.0",
+                "symfony/http-kernel": "^5.1.5 || ^6.0 || ^7.0",
+                "symfony/serializer": "^5.1 || ^6.0 || ^7.0"
+            },
+            "require-dev": {
+                "api-platform/core": "^3.0 || ^4.0",
+                "behat/behat": "^3.1",
+                "dg/bypass-finals": "^1.1",
+                "doctrine/data-fixtures": "^1.2 || ^2.0",
+                "doctrine/doctrine-bundle": "^2.11",
+                "doctrine/orm": "^2.6.3 || ^3.0",
+                "ext-json": "*",
+                "friends-of-behat/symfony-extension": "^2.0.11 || ^2.1.0",
+                "jms/serializer-bundle": "^1.4 || ^2.3 || ^3.0 || ^4.0 || ^5.0",
+                "laminas/laminas-code": "^3.4 || ^4.0",
+                "ocramius/proxy-manager": "^2.0.4",
+                "phpunit/phpunit": "^10.0 || ^11.0",
+                "symfony/asset": "^5.1 || ^6.0 || ^7.0",
+                "symfony/browser-kit": "^5.1 || ^6.0 || ^7.0",
+                "symfony/framework-bundle": "^5.1 || ^6.0 || ^7.0",
+                "symfony/mailer": "^5.1 || ^6.0 || ^7.0",
+                "symfony/property-access": "^5.1 || ^6.0 || ^7.0",
+                "symfony/security-bundle": "^5.1 || ^6.0 || ^7.0",
+                "symfony/stopwatch": "^5.1 || ^6.0 || ^7.0",
+                "symfony/templating": "^5.1 || ^6.0 || ^7.0",
+                "symfony/twig-bundle": "^5.1 || ^6.0 || ^7.0",
+                "symfony/var-dumper": "^5.1 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "api-platform/openapi": "To connect with API Platform",
+                "doctrine/doctrine-bundle": "To connect with Doctrine in Symfony project",
+                "doctrine/orm": "To connect with Doctrine"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CoopTilleuls\\ForgotPasswordBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent CHALAMON",
+                    "email": "vincent@les-tilleuls.coop"
+                }
+            ],
+            "description": "Provides a 'forgot password' feature for a REST API",
+            "homepage": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle",
+            "keywords": [
+                "api",
+                "forgot password",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/issues",
+                "source": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/tree/v2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/vincentchalamon",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-15T08:41:21+00:00"
         },
         {
             "name": "twig/twig",

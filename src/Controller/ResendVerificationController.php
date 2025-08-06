@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Repository\UserRepository;
 use App\Security\EmailVerifier;
-use App\Service\VerificationEmailFactory;
+use App\Service\MailerService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,7 +16,7 @@ class ResendVerificationController extends AbstractController
 {
     public function __construct(
         private EmailVerifier $emailVerifier,
-        private VerificationEmailFactory $verificationEmailFactory
+        private MailerService $mailerService
     ) {
     }
 
@@ -39,7 +39,7 @@ class ResendVerificationController extends AbstractController
             return new JsonResponse(['message' => 'Email already verified'], 200);
         }
 
-        $email = $this->verificationEmailFactory->createVerificationEmail($user);
+        $email = $this->mailerService->createVerificationEmail($user);
         $this->emailVerifier->sendEmailConfirmation($user, $email);
 
         return new JsonResponse(['message' => 'Verification email sent']);
